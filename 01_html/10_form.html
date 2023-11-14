@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Form</title>
+</head>
+<body>
+    <!-- 사용자 입력값을 받아 서버로 전송하기 위한 기능제공, 
+    1.form 
+    2.input
+    -->
+    
+    <!-- 
+       name: form의 이름
+       action : form하위에 제출할 서버 주소를 기입한다(url)
+       method (http메세지를 작성하는 방법)
+         - get (기본값) : 사용자 입력값을 url에 query-string 형식으로 전달한다.
+         - post : 사용자 입력값을 http body에 전달, 작성됨 (url 확인불가능)
+    
+     이 예시에서 query-string작성 시 key-value형식에 사용되는 key값은 name속성값이다.
+        
+    라벨과 input 태그가 연결되어서, 값을 query-string에 전달된다.
+
+    ##form 하위의  input 태그는 name속성을 반드시 가지고 있어야 한다. "name 속성" 에 input된 입력값이 담겨서 queryt-string에 담김
+    -->
+<h1>From</h1>
+    <form action="10_form.html"  method="get" name="logonFrm">
+      <label for="username">아이디</label>
+      <input type="username" id="username" name="_username">
+      <br>
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="_password">
+      <br>
+      <input type="submit" value="로그인">
+    </form>
+
+
+      <!-- ----------------------------------------------------- -->
+      <h2>input</h2>
+       <form action=""   method="get" >
+          <!-- fieldset: 입력값을 시각적으로 그룹핑해줌 -->
+        <fieldset>
+            <legend>text관련 input태그</legend>
+   
+            <label for="memberName">회원명</label>
+            <input type="text"  
+            id="memberName" 
+            name="memberName" 
+            value="홍길동"
+            placeholder="이름을 입력하세요,,," 
+            required
+            >   
+            <br>
+            
+            <label for="mnemberPw">비밀번호</label>
+            <input 
+            type="password" 
+            name="memberName" 
+            id="mnemberPw"
+            placeholder="비밀번호를 입력하세요"
+            value="1234"
+            maxlength="8"> <br>
+            <!-- required: 필수 입력값으로, 입력되지 않으면 제풀되지 않게 만든다.
+            maxlenth: 입력되는 글자수 제한걸기 -->
+
+        <label for="searth">검색</label>
+
+         <input type="searth" name="searthKw" id="searthKw" placeholder="검색어를 입력하세요">         <br>
+
+    <label for="memberEmail">이메일</label>
+    <input  type="email"  name="memberEmail" for="memberEmail">
+    <br>
+
+    <label for="homepage">홈페이지</label>
+    <input  type="url"  name="homepage" for="homepage">
+    <br>
+
+    <label for="memberTel">전화번호</label>
+    <input  type="tel"  name="memberTel" for="memberTel">
+    <br>
+        </fieldset>
+    </form>
+
+
+    <!-- ------------------------------------------------------------------------- -->
+        <Form action="">
+            <fieldset>
+               <legend>number관련 input</legend>
+               <label for="cnt">개수</label>
+               <input type="number" name="cnt" id="cnt"
+                min="1" max="1" value="1" step="2">
+
+<br>
+
+    <label for="scoer">점수</label>
+    <input type="range" name="socre" id="socre">
+    <br>
+
+            </fieldset>
+       
+            <input type="submit" value="제출">
+        </Form>
+
+
+   <!-- ---날짜관련해서 value의 형식은 절대 변경해선 안됨. VSC가 인식못함------------------------------------------ -->
+    <form action="">
+        <fieldset>
+            <legend>날짜 시간 관련 input</legend>
+            <label for="someday">날짜</label>
+            <input type="date" name="someday" id="someday" 
+            value="1999-09-09">
+        
+           <!-- ----------------------------------------------------- -->
+    <label for="sometime">시각</label>
+    <input type="time" name="sometime" id="sometime"
+    value="21:30">
+     <br>
+
+       <label for="when">날짜</label>
+       <input type="datetime-local" name="when" id="when"
+       value="1999-09-09T16:16">   
+
+        
+        
+        </fieldset>
+        <input type="submit" value="제출">
+    </form>
+<!-- ----------------------------------------------------- -->
+    <form action="">
+        <fieldset>
+            <legend>선택관련 imput</legend>
+            <!-- 
+                단일선택 radio
+                복수선택 checkbox
+                단일/복수선택 select            
+            -->
+
+        <!--1. 단일선택 radio -->
+              <div>
+           <Label for="genger-male">남</Label>
+           <input type="radio" name="gender" id="gender-male" value="M">
+
+           <Label for="genger-female">여</Label>
+           <input type="radio" name="gender" id="gender-female" value="F">
+              </div>
+       
+       
+              <!-- div>label>input:radio -->
+        <div>
+            <label for="sms">SNS 수신</label>
+            <input type="checkbox" name="sms" id="sms">
+        </div>
+        <!--2. 복수선택 checkbox -------------->
+          <div>
+            취미 :
+             <input type="checkbox" name="hobby" id="hobby-game" value="game" checked>
+             <label for="hobby-game">게임</label>
+
+             <input type="checkbox" name="hobby" id="hobby-moive" value="moive">
+             <label for="hobby-moive">영화</label>
+
+             <input type="checkbox" name="hobby" id="hobby-music" value="music">
+             <label for="hobby-music">게임</label>
+          </div>
+
+
+          <!--3. 단일/복수선택 select    multiple: 여러개 선택할수 잇게 하는 기능-->
+                  <select name="menu" id="menu" multiple>
+                    <option value="">==메뉴선택==</option>
+                   <option value="된">된장찌개</option>
+                   <option value="순" selected>순두부찌개</option>
+                   <option value="김">김치찌개</option>
+
+                  </select>
+
+           <!-- 4. datalist : 선택지 없으면 작성 하는 기능 -->
+             <lable for="userBrowser">브라우져 선택</lable>
+             <input type="text" name="userBrowser"  id="userBrowser" list="browsers">
+            <datalist id="browsers">
+            <!-- <option value="Edge">엣지</option>
+            <option value="Chroem">크롬</option>
+            <option value="Firefox">파이어폭수</option> -->
+
+            <option value="Edge"/>
+            <option value="Chroem"/>
+            <option value="Firefox"/>
+            </datalist>
+
+                    
+
+        </fieldset>
+        <input type="submit" value="제출">
+    </form>
+
+
+<!--------------------------------------------------------->
+        <!-- form>fielset>legend -->
+        <form action="">
+            <fielset>
+                <legend>기타 input</legend>
+                <div>
+                <lable for="favoriteColor">선호색상</lable>
+                <input type="color" name="favoriteColor" id="favoriteColor"
+                 value="#66ff00">
+                </div>
+
+
+            <div>
+                <label for="upFile">파일선택</label>
+                <input type="file" name="upFile" id="upFile" >
+            </div>
+
+            <!-- type < hidden >: 사용자한테 노출없이 서버에 전송해야 하는 데이터가 있다면 사용한다. -->
+            <div>
+                <input type="hidden" name="val" value="123">
+            </div>
+           <!-- -----------------------  disabled: 노출은 되지만 정보가 서버에 전송되지 않음.-->
+        <div>
+            <input type="text" name="name" value="홍길동" disabled>
+        </div>
+
+            </fielset>
+            <!-- 
+                버튼태그를 만드는 방법 2가지 : 둘 중 뭐로 정하든 결관느 동일함/
+                   - 1. input 버튼
+                 
+            -->
+        <div>    
+            <input type="button" value="버튼" >
+            <input type="reset" value="초기화" >
+            <input type="submit" value="제출" >
+        </div>
+        
+        
+          <!-- 2. button 버튼 -->
+         <div>
+            <button type="button">버튼</button>
+            <button type="reset">초기화</button>
+            <button type="submit">제출</button>  <!--type= submit이 기본값,,그래서 input값이 제출되면서 사이트가 새로고침되니까 주의 하기!-->
+            <button>제출</button>
+        </div>
+        </form>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Media</title>
+</head>
+<body>
+    <h1>Media</h1>
+    <!-- 
+        html5 에서는 미디어 관련해서 별도의 플러그인 없이 재생이 가능하다.
+     -->
+    
+       <!--
+          1.오디오
+            - 속성명 : 속성값 두개가 동일한 경우, 속성값 ["controls"] 부분 생략가능.
+        -->
+     <h2>audio</h2>
+      <audio src="../sample/audio/major.mp3" controls="controls"></audio> <br>
+      <audio src="../sample/audio/major.mp3" controls></audio> <br>
+      
+      <audio src="../sample/audio/major.mp3" 
+       autoplay  :자동재생 
+       muted     :음소거기능
+       loop      :반복재생
+       controls></audio>
+
+       <audio controls>
+        <!-- 같은 컨텐츠를 여러확장자로 준비하는 경우, 디바이스별로 최적화된 자원을 재생 -->
+          <source src="../sample/audio/major.mp3">
+       </audio>
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+    
+    <h2>video</h2>
+
+    <video src="../sample/video/small.mp4" controls></video> <br>
+   
+    <video src="../sample/video/small.mp4"
+    width="500px"
+    muted
+    loop
+    poster="../sample/image/city1.PNG"   
+    controls></video> <br>
+   
+    <video>
+        <!-- 
+            디바이스별로 최적화된 자원을 선택하여 재생할 수 있다.
+              - pc browser인 경우 mp4/webm/ogg 순으로 선호된다 그래서 소스파일을 여러개를 둔다. 예시 1처럼
+              - mobile browser인 경우 mp4/3gp 순으로 선호된다  
+              
+            서버부하를 줄이기 위해 용량이 큰 동영상파일은 별도의 미디어서버 또는 youtube,vimeo 등을 통해 제공하는 것이 좋음.
+            링크 따다가 재생하는 식으로,  
+        -->
+
+        <!-- 예시1 -->
+        <source src="../sample/video/small.webm" type="video/webm"> 
+        <source src="../sample/video/small.ogv" type="video/ogg">  
+        <source src="../sample/video/small.mp4" type="video/mp4">  
+    </video>
+
+</body>
+</html>

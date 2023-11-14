@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Image</title>
+</head>
+<body>
+    <h1>Image</h1>
+    <!-- 
+     1. src 이미지경로: 절대경로/상대경로 사용가능
+         - 절대경로: 
+         - 상대경로
+     2. alt 대체텍스트를 기입: 이미지 로드 실패시 화면에 노출되는 텍스트.스크린리더에 의해 해석/전달됨
+     -->
+    <img src="../sample/image/city1.PNG" 
+          alt="도시사진"
+          style="height: 300px;width: 300px;">
+
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MDNfNjgg%2FMDAxNjgzMTEyNTk0NzY5.qp6mLvivUI61fSYlpOy6MQ_np9fXcc4ZPHMqlpiy7Qsg._Iefq-NSRteMR4w4a3f5eDOKXzTqs86vGy8CWIrRAHkg.JPEG.ppong_2%2F1.jpg&type=a340" 
+          alt="개구리페페"
+          style="height: 300px;width: 300px;">       
+          
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzAyMjdfMjMz%2FMDAxNDg4MTc1MzI4NDE5.X74TDWdopfM7nOqB4CMc5KoOyYVbrLL5iDy_2WhrEeUg.Yc7MnHT0nFDV3AkvQszKM8yfflX0xZN2CIvEPeC-J1gg.PNG.sid89200%2Fimage.png&type=a340"
+          style="height: 300px;width: 300px;">  
+
+
+
+    <h2>절대 | 상대 단위</h2>
+    <h3>'PX' 절대단위이다.</h3>
+    <div>
+        <img src="../sample/image/flower1.PNG" width="100"  alt="">
+        <img src="../sample/image/flower2.PNG" width="100"  alt="">
+        <img src="../sample/image/flower3.PNG" width="100"  alt="">
+        <img src="../sample/image/flower4.PNG" width="100"  alt="">
+        <img src="../sample/image/flower5.PNG" width="100"  alt="">
+    </div>
+
+    <h3> '%' 상대(가변)단위: 화면의 크기에 따라서 이미지의 크기가 변경된다.</h3>
+     <!-- 부모태그 기준으로, 상대적인 크기가 지정됨 -->
+     <div>
+        <img src="../sample/image/flower2.PNG" width="17%"  alt="">
+        <img src="../sample/image/flower1.PNG" width="17%"  alt="">
+        <img src="../sample/image/flower3.PNG" width="17%"  alt="">
+        <img src="../sample/image/flower4.PNG" width="17%"  alt="">
+        <img src="../sample/image/flower5.PNG" width="17%"  alt="">
+      
+    </div>
+
+    <!-- 인라인과 블락을 섞어쓰면, 블락의 시작은 -->
+    <h2>정렬</h2>
+    <!-- div>img+p>lorem -->
+     <div>
+        <img src="../sample/image/river1.PNG"  
+        width="200px"
+        style="float: left; margin: 10px;"
+        alt="">
+        <!-- float? 원하는 코드를 두둥실 하게 만듬ㅋㅋ -->
+        <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestiae eius illo esse iure, quam vitae minus alias hic, saepe adipisci ut provident! Iure reprehenderit veritatis officia aut nam ab?
+        </p>
+     </div>
+     <br><br><br>
+     <div>
+     <img src="../sample/image/river1.PNG"  
+        width="200px"
+        style="float: right; margin: 10px;"
+        alt="">
+        <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestiae eius illo esse iure, quam vitae minus alias hic, saepe adipisci ut provident! Iure reprehenderit veritatis officia aut nam ab?
+        </p>
+     </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
