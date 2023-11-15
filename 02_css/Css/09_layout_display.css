@@ -1,0 +1,19 @@
+.block {
+     width: 150px;
+     height: 150px;
+     border: 1px solid black;
+}
+
+.color1 { background-color: red;}
+.color2 { background-color: orange;}
+.color3 { background-color: yellow;}
+.color4 { background-color: green;}
+.color5 { background-color: blue;}
+
+.d-inline { display: inline;}
+.d-block { display: block;}  /*인라인이였지만 블락처럼 비꿈/*/
+.d-inline-block { display: inline-block}  /*블락처럼 넓이 높이를 가지면서, 인라인처럼 화면의 크기에 따라 배치되는 피사체의 갯수가 달라진다*/
+
+.d-none {display: none;}
+.v-hidden {visibility: hidden;}
+.opacity-0 {opacity: 0;}

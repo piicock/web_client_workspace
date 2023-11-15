@@ -1,0 +1,22 @@
+#title {
+    color: red !important;
+    text-decoration: underline;
+}
+/* !important : style 덮어씌우기 금지하게 하는 문법*/
+
+#box {
+    width: 100px;
+    height: 100px;
+    border: 3px solid blue; 
+     background-color: chartreuse;
+}
+
+div {
+    background-color: pink;
+}
+
+.foo {
+    background-color: bisque;
+}
+
+/* wSc 참고하기!  */

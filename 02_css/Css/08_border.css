@@ -1,0 +1,27 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color:silver;
+    /* border: 1px solid black; */
+    border-top: 3px dashed  red;
+    border-right: 3px solid  green;
+    border-bottom: 3px dashed  rgb(217, 255, 0);
+    border-left: 3px solid blueviolet;
+}
+
+.item {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    background-color:cornflowerblue;
+    /* border-radius: 10px 20px 30px 40px; 끝을 동글게 다듬어준다 */
+     border-radius: 20%;
+
+    /*x-offset| y-offset|blur|spread(그림자크기)| cololr 순서로 기입*/
+
+
+}
+.item:hover {
+    box-shadow: 10px 5px 3px 20px greenyellow;  /*박스 그림자*/
+}
+

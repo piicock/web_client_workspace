@@ -1,0 +1,31 @@
+.item {
+    width: 300px;
+    height: 300px;
+    background-color: chartreuse;
+    border: 5px solid black;  /*적용시 피사체의 크기가 증가.*/
+    
+    /* FM으로 padding 적용하는 문법(순서 잘지키기) 
+        - 누락된 값이 있다면 맞은편의 값을 가져와서 적용한다.
+        - px크기가 1개만 써져있으면, 사방의 크기로 적용된다.
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    */
+    padding: 10px 20px;   /*패딩 적용시 피사체의 전체 크기가 증가됨*/
+    margin: 5px;  /*다른 파사체와의 여백을 제공해준다, 피사체 크기로 적용되지 않음*/
+
+}
+
+
+/* inline요소들은 width 나 heigth 값을 가질수 없음 */
+.item span {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 0, 64);
+    border: 5px solid black;  /*적용시 피사체의 크기가 증가.*/ 
+    padding: 20px 20px;  
+    margin: 30px;   /*위이래 margin값 무시됨.*/
+    color: white;
+}
+

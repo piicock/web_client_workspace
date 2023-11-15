@@ -1,0 +1,49 @@
+#sample {
+    /*block요소 하위 텍스트 정렬*/
+    text-align: center;
+    text-decoration: underline wavy;/*밑줄*/
+     /* underline | line-thrugh | overline  */
+    text-shadow: 3px 3px 2px;/*x-offset|y-offset|spead*/
+}
+
+a { /*밑줄 없애기*/
+  text-decoration: none;
+}
+
+a :hover {
+ text-decoration: underline;
+
+}
+
+
+/* ------------------------------ */
+.bg {
+ background-color:black
+}
+
+.shadow {
+    margin: 0;
+    font-weight:bolder; 
+    font-size : 100px;
+    color: white;
+}
+
+#shadow1 {
+    color: rgb(228, 102, 0);
+    text-shadow: 5px 5px 0px rgb(255, 238, 3) ;
+}
+
+#shadow2 {
+    text-shadow: 0px 1px 20px ;}
+
+#shadow3 {
+    text-shadow: 5px 5px 5px ;}
+
+
+#shadow4 {
+    text-shadow: 0px -2px 3px #fffffffb, 0px -10px 5px rgb(251, 255, 1);
+    
+}
+
+
+

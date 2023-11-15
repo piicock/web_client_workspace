@@ -1,0 +1,38 @@
+.parent{
+    background-color: bisque;
+    text-align :right;
+    /*light, right, center*/
+}
+.parent span {
+    background-color: hotpink;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;  /*rgb값* (rrggbb)/
+    /*center 위아래 좌우*/
+    /* margin : 0 auto; */
+    margin-left: auto;
+     
+    /*left*/
+    /*marhin-right : auto*/
+    
+    /* right*/
+    /*marhin-left : auto*/
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    border: 2px solid #000;
+    margin : 0 auto;
+    /* text-align: center; */
+
+    /*피사체를 상하좌우 가운데 정렬하는 가장 간단한 방법*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

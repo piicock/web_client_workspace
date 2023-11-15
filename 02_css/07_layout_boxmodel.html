@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Layout - BoxModel</title>
+    <link rel="stylesheet" href="css/07_boxmodel.css">
+</head>
+<body>
+    <h1>Layout - BoxModel</h1>
+     <!-- 
+        모든 tag는 boxmodel에 근거해서 화면에 랜더된다 
+        - content : 태그하위 내용영역 (width, height)
+        - padding  : content와 border사이의 여백
+        - border : 경계영역
+        - margin : 다른 요소와의 여백
+
+     마진겹침 현상
+        - 요소끼리의 마진이 충돌되는 경우,영역이 중첩된다 . 
+          영역의 기준은 마진값이 더 큰 피사체의 값을 따른다.
+    
+    span
+      - width    inline 요소 적용안됨
+      - heigth  inline 요소 적용안됨
+      - padding    
+       - margin  inline 요소 적용안됨
+        -->
+
+    <div class="item"><span>안녕</span></div>
+</body>
+</html>

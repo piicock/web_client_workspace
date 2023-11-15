@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML | Form</title>
 </head>
+
+
 <body>
     <!-- 사용자 입력값을 받아 서버로 전송하기 위한 기능제공, 
-    1.form 
+    1.form : input을 묶어서 뭐시기 해줌
     2.input
     -->
     
     <!-- 
-       name: form의 이름
-       action : form하위에 제출할 서버 주소를 기입한다(url)
+       name: form의 이름(입력된 값이 url에 전달된다, 서버에 전달되지 않음)
+       action : form 하위에 제출할 서버 주소를 기입한다(url)
        method (http메세지를 작성하는 방법)
-         - get (기본값) : 사용자 입력값을 url에 query-string 형식으로 전달한다.
+         - get (기본값) : 사용자 입력값을 url에 query-string 형식(직렬화)으로 전달한다. 육안으로 확인가능
          - post : 사용자 입력값을 http body에 전달, 작성됨 (url 확인불가능)
     
-     이 예시에서 query-string작성 시 key-value형식에 사용되는 key값은 name속성값이다.
+     이 예시에서 query-string작성 시 key-value형식에 사용되는 key값은 input 태그의 name속성값이다.
         
     라벨과 input 태그가 연결되어서, 값을 query-string에 전달된다.
 
@@ -48,9 +50,10 @@
             id="memberName" 
             name="memberName" 
             value="홍길동"
-            placeholder="이름을 입력하세요,,," 
+            placeholder="이름을 입력하세요.." 
             required
             >   
+            <!-- readonly : 입력못하고 읽기만 하게함 -->
             <br>
             
             <label for="mnemberPw">비밀번호</label>
@@ -61,7 +64,7 @@
             placeholder="비밀번호를 입력하세요"
             value="1234"
             maxlength="8"> <br>
-            <!-- required: 필수 입력값으로, 입력되지 않으면 제풀되지 않게 만든다.
+            <!-- required: 필수 입력값으로, 입력되지 않으면 제출되지 않게 만든다.
             maxlenth: 입력되는 글자수 제한걸기 -->
 
         <label for="searth">검색</label>
@@ -77,8 +80,17 @@
     <br>
 
     <label for="memberTel">전화번호</label>
+    <!-- 숫자키패드 제공 -->
     <input  type="tel"  name="memberTel" for="memberTel">
     <br>
+
+    <label for="memo">메모</label>
+    <!-- 크기 조절가능한 메모장 -->
+    <textarea name="memo" cols="10" rows="5" for="memo">a 
+         b  c
+d
+         <br>
+
         </fieldset>
     </form>
 
