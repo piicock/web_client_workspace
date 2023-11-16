@@ -1,0 +1,86 @@
+.outer {
+    background-color: gray;
+    border: 1px solid black;
+
+}
+
+.first {
+    width:  300px;
+    height: 300px;
+    background-color:  thistle;
+}
+
+.sencond {
+    width:  200px;
+    height: 200px;
+    background-color:  violet;
+
+    top: 50px; /*offset: 위로부터 50px 떨어트리기*/
+    left: 50px; /*offset: 왼쪽로부터 50px 떨어트리기*/
+}
+
+.third {
+    width:  100px;
+    height: 100px;
+    background-color:  rgb(179, 4, 179);
+
+    top: 100px; /*offset: 위로부터 50px 떨어트리기*/
+    left: 100px; /*offset: 왼쪽로부터 50px 떨어트리기*/
+}
+
+.box {
+    width:  100px;
+    height: 100px;
+    background-color:aqua;
+    border-color: tomato;
+    border-radius: 50%;
+
+    right:  50px;
+    bottom : 50px;
+}
+
+.p-relative { position: relative; }
+
+.p-absolute { position:absolute }
+
+.p-fixed { position: fixed; }
+
+.p-sticky { 
+    position: sticky;
+    top: 0px;
+    background-color: gold;
+    z-index: 999; /*값이 클수록 앞에 위치함 기본값은 0 (사용자 기준으로 앞)(3차원 개념의 Z 좌표) */
+}
+.wrap {
+    height: 80px;
+    margin: 30px;
+}
+.box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.box1 {
+    background-color: deepskyblue;
+}
+
+.box2 {
+    background-color: palevioletred;
+    top: 20px;
+    left: 20px;
+}
+
+.box3 {
+    background-color: rgb(255, 0, 85);
+    top:  40px;
+    left: 40px;
+}
+
+.z-10 { z-index: 10;}
+.z-20 { z-index: 20;}
+.z-30 { z-index: 30;}
+
+
+

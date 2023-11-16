@@ -1,0 +1,113 @@
+.wrapper {
+    display:  flex;
+    flex-direction:  column;
+    justify-content:  center;
+    align-items: center; 
+}
+
+.wrapper img {
+    width: 300px;
+    margin:  50px 0;
+}
+
+/*요소이동 translate:(x축, y축)*/
+/* fosition값 변겅없이 요소의 위치이동이 가능하다 */
+.wrapper img:first-child:hover {
+     transform: translate(-50px, 100px);
+}
+
+/* 확장/축소 scale(N) */
+.wrapper img:nth-child(2):hover {
+    transform: scale(.5);
+}
+
+/* 회전 retate(n deg) 회전각을 설정하는거라서 결국 360돌리면 원상태임 */
+.wrapper img:last-child:hover {
+    transform: rotate(-90deg);
+}
+
+
+ /* transition */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color:  tomato;
+    border:  2px solid #000;
+
+
+    /* transition-duration: 1s; */
+    /* transition-property: width, height; */
+    /* 모든속성에 적용하는건 all, 원하는 속성을 적으면 거그먼 적용됨*/
+    /*transition-delay: .5s; *//*바로 작동하지 않고 trans되는데 시동시간을 걸어넣음*/
+    /* transition-timing-function: ease-in-out; */
+     /* transition: property| duration | timing-function | delay; */
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+
+  
+    }
+
+.box:hover {
+    background-color:  yellow;
+    width: 200px;
+    height: 200px;
+}
+
+/* 트랜지션이 적용된 게시글카드 */
+
+.card {
+    display: inline-block;
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+    padding: 30px;
+    background-color:  rgb(6, 83, 114);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    cursor:copy;  /*마우스포인터 모양 설정*/
+    box-shadow: 0 35px 77px -17px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.card h1{
+      font-weight: 300;
+      text-shadow: 3px 2px 10px rgba(255, 0, 0, 0.397);
+}
+
+/* 감춰져 있다가, 호버하면 정렬을 갖추면서 나타남 */
+.card h2 {
+    font-weight: 300;
+    margin-top: 20px; /*다른 요소와의 간격*/
+    font-style: italic; /*글자의 스타일 : 기울어짐 */
+    transform: translate(-380px,0); /*translate: X,Y축 설정해서 위치변경*/
+    opacity: .7;
+}
+
+.card p {
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 24px;
+    transform: translate(450px,0);
+    transition-delay:  .1s;
+    opacity: 0.5;
+}
+
+
+.transition {
+    transition-duration: 2s; /*변환된 상태를 유지하는 시간*/
+}
+
+.card:hover {
+    box-shadow: 0 35px 77px -17px rgba(0, 0, 0, 0.8);
+
+   
+}
+
+.card:hover .transition {
+    transform : translate(0, 0);
+    opacity: 1;
+    font-weight: 400;
+    box-shadow: 0 35px 77px -17px rgba(0, 0, 0, 0.397);
+    
+}

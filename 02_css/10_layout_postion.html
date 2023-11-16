@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Position</title>
+    <link rel="stylesheet" href="Css/10_layout_position.css">
+</head>
+<body>
+    <h1>Position</h1>
+    <!-- 
+        static 
+            - (기본값) 문서내 정의된 대로 화면에 배치된다(위->아래 , 좌->우)
+            - offset 값 무시
+        relative
+            - 문서내에 정의된 대로 화면에 배치 ((위->아래 , 좌->우))
+            - offset 값 적용
+        absolute
+            - 가장 가까운 부모/조상요소(static아닌) 기준으로 offset 적용
+        fixed
+            - 브라우져 viewport기준으로 oggset적용 (화면 고정)
+        stiky
+           -    relative 처럼 작동하다가 특정 offset에 다다르면 fuxed처럼 작동          
+    -->
+    <h2>static</h2>
+    <!-- .outer>.first+.sencond+.thrid -->
+    <div class="outer">
+        <div class="first"></div>
+        <div class="sencond"></div>
+        <div class="third"></div>
+    </div>
+
+
+    <h2>relative</h2>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="sencond p-relative"></div>
+        <div class="third p-relative "></div>
+    </div>
+
+     <br><br><br><br><br>
+    <h2>absolute</h2>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="sencond p-absolute"></div>
+        <div class="third p-absolute "></div>
+    </div>
+
+    <h2>fixed</h2>
+    <div class="p-fixed box"></div>
+
+
+    <h2>sticky</h2>
+    <div class="p-sticky circle"></div>
+
+     
+    <h2>z-index</h2>
+   <!-- 
+    z축 기준으로 요소를 배치하는 속성
+    값이 클수록, 사용자쪽으로 배치됨.
+    postion static일때는 사용불가능!
+    z-index값이 같다면 문서상 나중에 작업된 피사체가 앞으로 위치하게 된다.
+    -->
+     
+  <div class="wrap p-relative">
+     <div class="box box1 z-10"></div>
+     <div class="box box2 z-20"></div>
+     <div class="box box3 z-30"></div>
+  </div>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
