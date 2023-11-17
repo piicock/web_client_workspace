@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title> JS | class로 DOM 제어하기 </title>
+     <style>
+        table {
+            border: 1px solid black;
+            border-collapse:  collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            border:  1px solid black;
+            padding:  5px;
+        }
+        .on {
+            background-color: blue;
+            color: aliceblue;
+        }
+     </style>
+</head>
+
+<body>
+    <!-- 예제1  -->
+     <h1>class로 DOM제어하기</h1>
+     <tabel>
+        <thead>
+            <tr>
+                <th colspan="5">
+                 <h2> 🌲수강신청🌲</h2>
+                </th>
+            </tr>
+        </thead>
+          <tbody>
+            <tr>
+                <th colspan="5">
+                      <label for="checkAll">모두선ㅌ책</label>
+                       <input type="checkbox" id="checkbox"> 
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- checkbox가 체크되면 함수를 호출, 그 함수 안에 부모 td에 클래스 값을 부여 -->
+                      <label for="subject-kor">국어</label>
+                     <!-- js에서의 this용법1: tag객체 inline속성에 작성한 this는 태그 객체 자신을 가리킨다. -->
+                       <input type="checkbox" name="subject" id="suject-kor" value="국어"  onchange = "checkSubject(this)"> 
+                </td>
+                <td>
+                    <label for="subject-eng">영어</label>
+                     <input type="checkbox" name="subject" id="suject-eng" value="영어" onchange = "checkSubject(this)"> 
+              </td>
+              <td>
+                <label for="subject-math">수학</label>
+                 <input type="checkbox" name="subject" id="suject-math" value="수학" onchange = "checkSubject(this)"> 
+          </td>
+            </tr>
+                 
+
+
+
+
+          </tbody>
+
+
+     </tabel>
+
+     <script src="04_className.js"></script>
+</body>
+</html>

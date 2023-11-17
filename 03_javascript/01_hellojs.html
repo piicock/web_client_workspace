@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Hello JS</title>
+
+    <!-- 외부에서 작성한 JS의 함수 불러오기 위한 링크선언 -->
+    <script>
+        //두번쨰 좋은 위치
+        console.log(1234)
+        
+        // bar();  -> 상단에 외부 js를 로드하는 코드가 없으므로 사용불가능
+        </script>
+</head>
+<body>
+    <h1>Hello JS</h1>
+    <!-- 
+        - js는 웹페이지내에서 동적인(사용자와의 상호작용, 이벤트 처리, 외부서비스 이용 등등..) 부분을 담당하는 언어 
+        - Brenden Eich 가 기존의 lisp 언어를 베이스로 10일만에 작성한 언어!
+        - 근본없는 언어라고 하네요
+        - node라는 런타임을 사용해서 브라우져가 아닌 서버/네이티브 환경에서 실행 가능 ! 
+          node: ? 
+        - 유연한 문법, 배우기에 쉽다
+        - Mocha, Livescript 라는 이름을 사용하다가, 자바가 핫해서 이름 자바스크립트로 바꿈 ㅋㅋㅋ   
+        - c/c++로 제작된 언어라 자바와 비슷한 부분이 많음
+
+    -->
+    <h2>js사용하는 방법</h2>
+    <ol>
+        <li>
+            태그의 이벤트 속성(onXXX)에 작성하기
+            <button onclick="alert('🍕🍕🍕')">클릭</button>
+        </li>
+        <li>
+            html 페이지에  script 태그를 통해 작성하기
+            <button onclick="foo();">클릭</button>
+        </li>
+        <li>
+            외부 js 파일을 로드해서 실행
+            <button onclick="bar()">클릭</button>
+        </li>
+    </ol>
+
+
+    <script src="js/01_hellojs.js"></script>
+    <script>
+        //가장 좋은 위치 (DOM Tree 구정 완료후에 스트립트가 실행됨)
+        console.log(5678);
+
+        //함수 선언,, foo()로 호출할수 있다.
+        function foo () {
+            console.log('🍔🍔🍔')
+        }
+
+        bar();
+    </script>
+</body>
+</html>
