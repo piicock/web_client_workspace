@@ -7,18 +7,18 @@
      - 변수의 자료형이 값에 따라 지정된다. (dynamic typing)
      - 변수를 선언할떄 자료형을 선언하지 않음   
      - 변수에 값이 담기는 순간, 그 값의 자료형에 따라 변수의 자료형이 결정된다!
-  1. undefined
+  1. undefined : 타입없음
   2. string
   3. number
   4. boolean
-  5. array
-  6. object
-  7. function
+  5. array : 배열타입..배열의 모든내용 + ob로
+  6. object : ob타입
+  7. function : 함수타입
  */
 function testype() {
 //지역 영역
 
-//변수선언 키워드 let | const
+//변수선언 키워드 let | const  let과 const의 차이점 !! -> let은 변수가변성/const는 비가변
 
 let a; //undefined
 console.log(a, typeof a);  //undefined 'undefined'
@@ -35,6 +35,7 @@ const age = 33;
 console.log(age, typeof age); //33 'number'
 const married = true;
 console.log(married, typeof married); //true 'boolean'
+
 const arr = [1,2,3,4,5];
 console.log(arr, typeof arr); // [1, 2, 3, 4, 5] 'object'
 const obj = {

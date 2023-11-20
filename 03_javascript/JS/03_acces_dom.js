@@ -7,21 +7,22 @@
 console.log(document);
 
 /**
- *1.  document.getElementById(elementId: string): HTMLElement | null
+ *1.  document.getElementById(Id: string): HTMLElement | null
       id는 고유값이라 tag한개만을 포함하고 있어서 단수형. <Element>
  */
 
+//.id로 
 function getById(){
-  const li1 =  document.getElementById("li1");
-  console.log(li1 , typeof li1);
-  console.dir(li1); //객체 계층구조로 열람
+  const li1 =  document.getElementById("li1");//id=li1의 값을 변수에 담음.id값과 class값을 반환
+  console.log('1',li1 ,typeof li1); //li1의 query내용 + 변수타입 출력
+  console.dir(2, li1); //객체 계층구조로 열람
 
   console.log(li1.innerHTML); //getter
-  li1.innerHTML = '안녕자바 스크립트.1 ' //setter
+  li1.innerHTML = '안녕자바 스크립트.1 ' //setter : li1(id)의 내용을 변경한다.
 
   const notExist = document.getElementById('asdagdsgage');
   // nnull은 : object타입의 값없음 의미
-  console.log(notExist, typeof notExist); //null 'object'
+  console.log(notExist, typeof notExist); //null 'object' -> 없는 id값을 getter해서..
 }
 
 /**
@@ -68,8 +69,12 @@ function getByName () {
            hobbyChecked += hobbies.values + " ";
         }
     }
- }
-   alert(hobbyChecked);
+    alert(hobbyChecked);
+ 
+   }
+
+
+   
 
    /**
     * [name=hobby] 체크 박스를 모든버튼 선택/해체

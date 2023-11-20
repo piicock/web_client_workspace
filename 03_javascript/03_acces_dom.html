@@ -10,11 +10,19 @@
 <body>
     <h1>DOM에 접근하기</h1>
     <!-- ul>li#li$.grounp1*5     -->
-    <button onclick="getById()">id</button>
-    <button onclick="getBytag()">tag</button>
-    <button onclick="getByclass()">Class</button>
-    <button onclick="_querySelector()">querySeleter</button>
-    <button onclick="_querySelectorAll()">SelertAll</button>
+
+    <!--1. ID로 해당 vaule 컨트롤 -->
+    <button onclick="getById()">id</button>  
+    
+    <!--2. tag로 해당 vaule 컨트롤 -->
+    <button onclick="getByTag()">tag</button>
+    
+    <!--3. class로 해당 vaule 컨트롤 -->
+    <button onclick="getByClass()">Class</button>
+    
+    <!--4. class로 해당 vaule 컨트롤 -->
+    <button onclick="_querySelector()">querySelector</button>
+    <button onclick="_querySelectorAll()">querySelectorAll</button>
     <ul>
         <li id="li1" class="group1">Hello JS 1</li>
         <li id="li2" class="group2">Hello JS 2</li>
@@ -26,6 +34,7 @@
     <form action="">
         <feildset>
             <legend>취미 선택</legend>
+              <!-- div>label+input:checkbox -->
             <dev>
                 <label for="hobby-baskball">농구</label>
                 <input type="checkbox" name="hobby" id="hobby-baskball" value="농구">
