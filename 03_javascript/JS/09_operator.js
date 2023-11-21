@@ -9,8 +9,22 @@ function test1 () {
     //prompt: 문자열 반환
   const num = Number(prompt("정수를 입력하세요," , 10));
   console.log(num);
+  
+  console.log(3 || 4);
+  console.log(0 || 4);
+  console.log(0 || 0);
+  console.log(0.0 || false);
+  console.log( "" || undefined);
+  console.log('--------');
 
-//true && true => 우항검사 (&&는 양쪽다 true여야함.)
+  console.log(3 && 4);
+  console.log(10 && 23.3);
+  console.log(false && 4);
+  console.log(false && 0);
+  console.log(1 && undefined);
+  console.log(2 && 0.0);
+  console.log("" && undefined);
+//true && true => 우항검사 
 //true && false => 우항검사
 //false && true 
 //false && false
@@ -33,7 +47,7 @@ else
   alert ("홀수입니다")
 
 
-// null(false) || 실행문
+// null(false) || 실행문 -> 
   document.querySelector("#foo") 
   || (document.body.innerHTML += '<div id="foo">#foo가 없어서 생성할게요</div>');
   //body tag 하단에 HTML구문 추가

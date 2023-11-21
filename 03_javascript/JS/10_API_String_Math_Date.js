@@ -171,8 +171,8 @@ function ttest4() {
     const now = new Date(); //new 생성자 함수를 호출해서 now변수에 담기
     console.log(now);
 
-    console.log(now.getFullYear());
-    console.log(now.getMonth() +1); // 0~ 11반환
+    console.log(now.getFullYear());  //2023
+    console.log(now.getMonth() +1); // (0~ 11반환) //21
     console.log(now.getDate());
 
     console.log(now.getHours());
