@@ -65,7 +65,14 @@ function Pet (name, breed, weigth, age, ...colors) {
     this.weight;
     this.age;
     this.colors;
-    this.brak = function() {
+    // this.brak = function() {
+    //     return this.weight < 10 ? '왈왈' : '멍멍';
+    // };
+
+
+      //객체안의 함수는 지양할것.
+    //자기 this가 없으면 부모의 this를 가져다가 쓴다.
+    this.brak = () => {
         return this.weight < 10 ? '왈왈' : '멍멍';
     };
 }
@@ -80,3 +87,4 @@ const test3 = function(){
     console.log(this); //window가 나옴
     console.log(window, globalThis);
 }
+
