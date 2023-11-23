@@ -71,6 +71,8 @@ Truck.prototype.constructor = Truck;
  *  - apply (this객체, [..params])
  *  - call (this객체, [..params])
  *  - bind (this객체 ) 특징: 바인딩 후에 함수를 반환함.
+ * 
+ *  = 화상표 함수는 this를 재 바이인딩  할 수없다.
  */
 
  const test3 = () => {
